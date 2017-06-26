@@ -4,9 +4,7 @@ function updateHeading(ev) {
     const name = f.personName.value
     const age = f.personAge.value
     const color = f.personColor.value
-    const heading = document.querySelector('h1')
     const colorheader = document.querySelector('#colorDisplay')
-    heading.textContent = name
     const change = document.querySelector('#inputDisplay')
     change.innerHTML = "Name: " + name + " Age: " + age;
     colorDisplay.innerHTML = "I like " + color + " too!";

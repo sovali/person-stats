@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Person Stats</title>
+        <link href="index.css" type="text/css" rel="stylesheet">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -18,11 +19,20 @@
                 <label for="personName">Name</label>
                 <input type="text" name="personName">
             </p>
+            <p>
+                <label for="personAge">Age</label>
+                <input type="text" name="personAge">
+            </p>
+            <p>
+                <label for="personColor">Color</label>
+                <input type="text" name="personColor">
+            </p>
             <button type="submit">Go</button>
         </form>
 
         <div id="stats">
-        
+        <p id="inputDisplay"></p>
+        <h2 id="colorDisplay"> </h2>
         </div>
 
         <script src="index.js"> </script>

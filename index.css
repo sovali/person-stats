@@ -5,6 +5,8 @@
 
 #colorDisplay {
     font-style: italic;
+    text-transform: uppercase;
+    font-size: 32px;
 }
 
 button {

@@ -3,6 +3,13 @@
     font-family: georgia;
 }
 
+h1 {
+   border: 1px dashed #C14242;
+   text-transform: uppercase;
+   font-size: 25px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
 div {
     padding-top: 10px;
 }
@@ -10,7 +17,6 @@ div {
 h2 {
     font-style: italic;
     text-transform: uppercase;
-    font-size: 32px;
 }
 
 button {

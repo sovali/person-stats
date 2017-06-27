@@ -1,3 +1,11 @@
+function renderColor(color) {
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = color
+    colorDiv.style.width = '6rem';
+    colorDiv.style.height = '3rem';
+
+    return colorDiv;
+}
 function handleSubmit(ev) {
     ev.preventDefault();
     const f = ev.target
@@ -19,13 +27,7 @@ function handleSubmit(ev) {
 
     const colorItem = document.createElement('li')
     colorItem.textContent = `I like this color too!`
-
-    const colorDiv = document.createElement('div')
-    colorDiv.style.backgroundColor = color
-    colorDiv.style.width = '6rem';
-    colorDiv.style.height = '3rem';
-
-    colorItem.appendChild(colorDiv)
+    colorItem.appendChild(renderColor(color))
     info.appendChild(colorItem)
 
     stats.appendChild(info)       

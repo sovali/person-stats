@@ -1,5 +1,7 @@
 # Person Stats
 
+First project for Xtern Bootcamp 2017 Session 3!
+
 ##Day 1 Homework
 
 Update the new _details_ div with the value of the text input

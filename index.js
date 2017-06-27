@@ -6,29 +6,42 @@ function renderColor(color) {
 
     return colorDiv;
 }
+
+function renderListItem(item) {
+    const attr = item.getAttribute("type");
+    const val = item.value;
+    if (attr == "text") {
+        const nameItem = document.createElement('li')
+        nameItem.textContent = `Name: ${val}`
+        return nameItem;
+    } else if (attr == "color") {
+        const colorItem = document.createElement('li')
+        colorItem.textContent = `I like this color too!`
+        colorItem.appendChild(renderColor(val))
+        return colorItem;
+    } else if (attr == "number") {
+        const ageItem = document.createElement('li')
+        ageItem.textContent = `Age: ${val}`
+        return ageItem;
+    }
+}
+
 function handleSubmit(ev) {
     ev.preventDefault();
     const f = ev.target
-    const name = f.personName.value
-    const age = f.personAge.value
-    const color = f.personColor.value
+    const name = f.personName
+    const age = f.personAge
+    const color = f.personColor
     //const change = document.querySelector('#inputDisplay')
     // change.innerHTML = `Name: ${name} and age: ${age}`;
 
     const info = document.createElement('ul')
 
-    const nameItem = document.createElement('li')
-    nameItem.textContent = `Name: ${name}`
-    info.appendChild(nameItem)
+    info.appendChild(renderListItem(name))
 
-    const ageItem = document.createElement('li')
-    ageItem.textContent = `Age: ${age}`
-    info.appendChild(ageItem)
+    info.appendChild(renderListItem(age))
 
-    const colorItem = document.createElement('li')
-    colorItem.textContent = `I like this color too!`
-    colorItem.appendChild(renderColor(color))
-    info.appendChild(colorItem)
+    info.appendChild(renderListItem(color))
 
     stats.appendChild(info)       
     

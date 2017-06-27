@@ -26,6 +26,18 @@ function renderListItem(item) {
     }
 }
 
+function renderList(name, age, color) {
+    const info = document.createElement('ul')
+
+    info.appendChild(renderListItem(name))
+
+    info.appendChild(renderListItem(age))
+
+    info.appendChild(renderListItem(color))
+
+    stats.appendChild(info)
+}
+
 function handleSubmit(ev) {
     ev.preventDefault();
     const f = ev.target
@@ -35,16 +47,8 @@ function handleSubmit(ev) {
     //const change = document.querySelector('#inputDisplay')
     // change.innerHTML = `Name: ${name} and age: ${age}`;
 
-    const info = document.createElement('ul')
+    renderList(name,age,color)
 
-    info.appendChild(renderListItem(name))
-
-    info.appendChild(renderListItem(age))
-
-    info.appendChild(renderListItem(color))
-
-    stats.appendChild(info)       
-    
 }
 
 const personForm = document.querySelector('#person-form')

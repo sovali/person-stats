@@ -5,14 +5,18 @@ function updateHeading(ev) {
     const age = f.personAge.value
     const color = f.personColor.value
     const colorheader = document.querySelector('#colorDisplay')
-    const change = document.querySelector('#inputDisplay')
-    change.innerHTML = "Name: " + name + " Age: " + age;
-    if (color.length == 0) {
-        colorDisplay.innerHTML = "Tell me what color you like!!!";
-    } else {
-    colorDisplay.innerHTML = "I like " + color + " too!";
-    colorDisplay.style.color = color;
-    }//heading.innerHTML = name
+    //const change = document.querySelector('#inputDisplay')
+    // change.innerHTML = `Name: ${name} and age: ${age}`;
+
+    const info = document.createElement('p')
+    info.textContent = `Hi ${name}, age ${age}`
+    stats.appendChild(info)
+
+    const colorinfo = document.createElement('h2')
+    colorinfo.textContent = `I like this color too!`
+    colorinfo.style.color = color
+    stats.appendChild(colorinfo)
+    
 }
 
 const personForm = document.querySelector('#person-form')

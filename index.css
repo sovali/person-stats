@@ -3,11 +3,11 @@
     font-family: georgia;
 }
 
-#inputDisplay {
+div {
     padding-top: 10px;
 }
 
-#colorDisplay {
+h2 {
     font-style: italic;
     text-transform: uppercase;
     font-size: 32px;

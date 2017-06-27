@@ -7,9 +7,12 @@ function updateHeading(ev) {
     const colorheader = document.querySelector('#colorDisplay')
     const change = document.querySelector('#inputDisplay')
     change.innerHTML = "Name: " + name + " Age: " + age;
+    if (color.length == 0) {
+        colorDisplay.innerHTML = "Tell me what color you like!!!";
+    } else {
     colorDisplay.innerHTML = "I like " + color + " too!";
     colorDisplay.style.color = color;
-    //heading.innerHTML = name
+    }//heading.innerHTML = name
 }
 
 const personForm = document.querySelector('#person-form')

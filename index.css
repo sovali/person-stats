@@ -3,6 +3,10 @@
     font-family: georgia;
 }
 
+#inputDisplay {
+    padding-top: 10px;
+}
+
 #colorDisplay {
     font-style: italic;
     text-transform: uppercase;

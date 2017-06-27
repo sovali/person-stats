@@ -1,4 +1,4 @@
-function updateHeading(ev) {
+function handleSubmit(ev) {
     ev.preventDefault();
     const f = ev.target
     const name = f.personName.value
@@ -19,7 +19,13 @@ function updateHeading(ev) {
 
     const colorItem = document.createElement('li')
     colorItem.textContent = `I like this color too!`
-    colorItem.style.color = color
+
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = color
+    colorDiv.style.width = '6rem';
+    colorDiv.style.height = '3rem';
+
+    colorItem.appendChild(colorDiv)
     info.appendChild(colorItem)
 
     stats.appendChild(info)       
@@ -27,7 +33,7 @@ function updateHeading(ev) {
 }
 
 const personForm = document.querySelector('#person-form')
-personForm.addEventListener('submit', updateHeading)
+personForm.addEventListener('submit', handleSubmit)
 
-//const btn = document.querySelector('button')
+//const btn = document.querySelector('-m button')
 //btn.addEventListener('click', updateHeading)

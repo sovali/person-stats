@@ -3,22 +3,31 @@
     font-family: georgia;
 }
 
+h1 {
+    text-align: center;
+}
+
 body {
     padding: 1rem;
 }
 
 h1 {
-   border: 1px dashed #C14242;
+   border: 4px dashed #6e6e6e;
    text-transform: uppercase;
    font-size: 25px;
+   border-radius: 50%;
+   width: 500px;
 }
 
 div {
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 button {
-    background-image: -webkit-linear-gradient(#EEC8C8, #C14242);
+    background-color: #6e6e6e;
     background-repeat: no-repeat;
     background-size: contain;
+    width: 100px;
+    height: 40px;
 }

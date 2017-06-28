@@ -1,9 +1,12 @@
 function renderColor(color) {
     const colorDiv = document.createElement('div')
     colorDiv.style.backgroundColor = color
-    colorDiv.style.width = '6rem';
-    colorDiv.style.height = '3rem';
-
+    colorDiv.style.width = '6rem'
+    colorDiv.style.height = '3rem'
+    const header = document.querySelector('h1')
+    header.style.borderColor = color
+    const button = document.querySelector('button')
+    button.style.backgroundColor = color;
     return colorDiv;
 }
 
@@ -44,8 +47,6 @@ function handleSubmit(ev) {
     const name = f.personName
     const age = f.personAge
     const color = f.personColor
-    //const change = document.querySelector('#inputDisplay')
-    // change.innerHTML = `Name: ${name} and age: ${age}`;
 
     renderList(name,age,color)
 
@@ -53,6 +54,3 @@ function handleSubmit(ev) {
 
 const personForm = document.querySelector('#person-form')
 personForm.addEventListener('submit', handleSubmit)
-
-//const btn = document.querySelector('-m button')
-//btn.addEventListener('click', updateHeading)
